@@ -1,7 +1,7 @@
 # flutter_datafinder
 
-基于datarangers的datafinder SDK 封装的flutter插件;支持android,ios
-[数据漫游者](https://datarangers.com.cn/product/datafinder)
+基于datarangers[数据漫游者](https://datarangers.com.cn/product/datafinder)的datafinder SDK 封装的flutter插件;
+#### 支持android,ios
 
 
 ## 安装
