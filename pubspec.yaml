@@ -1,7 +1,7 @@
 name: flutter_datafinder
 description: A new Flutter plugin.
 version: 0.0.1
-author: mixiaodou
+#author: mixiaodou
 homepage: https://github.com/mixiaodou/flutter_datafinder
 
 environment:
