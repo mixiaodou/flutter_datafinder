@@ -72,35 +72,46 @@ class _MyAppState extends State<MyApp> {
             ),
             RaisedButton(
               onPressed: () async {
-                bool b = await FlutterDataFinder.setUid('abc123');
+                //设置 uid用户唯一标示uid
+                await FlutterDataFinder.setUid('abc123');
               },
               child: Text("setUid"),
             ),
             RaisedButton(
               onPressed: () async {
-                bool b = await FlutterDataFinder.event('onclick');
+                //上报 事件
+                await FlutterDataFinder.event('onclick');
               },
               child: Text("event"),
             ),
             RaisedButton(
               onPressed: () async {
-                bool b =
-                    await FlutterDataFinder.event('onclick2', params: {'a': 1});
+                //上报 事件,可携带参数params
+                await FlutterDataFinder.event('onclick2', params: {'a': 1});
               },
               child: Text("event params"),
             ),
             RaisedButton(
               onPressed: () async {
-                bool b = await FlutterDataFinder.pageStart('homePage');
+                //上报 pageStart事件,指定pageName(datafinder并没有page的切换事件，这里是基于event的封装)
+                await FlutterDataFinder.pageStart('homePage');
               },
               child: Text("pageStart"),
             ),
             RaisedButton(
               onPressed: () async {
-                bool b = await FlutterDataFinder.pageStart('homePage',
+                //上报 pageStart事件,指定pageName(datafinder并没有page的切换事件，这里是基于event的封装)
+                await FlutterDataFinder.pageStart('homePage',
                     params: {'a': 123});
               },
               child: Text("pageStart params"),
+            ),
+            RaisedButton(
+              onPressed: () async {
+                //上报 pageEnd事件,指定pageName(datafinder并没有page的切换事件，这里是基于event的封装)
+                await FlutterDataFinder.pageEnd('homePage', params: {'a': 123});
+              },
+              child: Text("pageEnd params"),
             ),
           ],
         ),
