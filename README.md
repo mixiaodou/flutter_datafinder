@@ -99,5 +99,5 @@ await FlutterDataFinder.pageEnd('homePage', params: {'a': 123});
 | flutter_datafinder | datafinder sdk |
 | ------ | ------ |
 | event(eventName)   | event("event_"+eventName)  |
-| pageStart(pageName)| event("pageStart"+pageName)|
-| pageEnd(pageName)  | event("pageEnd"+pageName)  |
+| pageStart(pageName)| event("pageStart_"+pageName)|
+| pageEnd(pageName)  | event("pageEnd_"+pageName)  |
