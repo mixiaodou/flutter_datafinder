@@ -92,6 +92,8 @@ await FlutterDataFinder.pageEnd('homePage');
 await FlutterDataFinder.pageEnd('homePage', params: {'a': 123});
 
 ```
+
+## 补充说明
 - flutter_datafinder事件上报api和datafinder事件上报api对照表
 
 | flutter_datafinder | datafinder sdk |
@@ -99,5 +101,3 @@ await FlutterDataFinder.pageEnd('homePage', params: {'a': 123});
 | event(eventName)   | event("event_"+eventName)  |
 | pageStart(pageName)| event("pageStart"+pageName)|
 | pageEnd(pageName)  | event("pageEnd"+pageName)  |
-
-## 补充说明
