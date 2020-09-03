@@ -8,7 +8,7 @@
 项目托管在github,在flutter项目的pubspec.yaml 文件中引入
 - 引入插件
 ```yaml
-datafinder_plugin:
+flutter_datafinder:
     git:
       url: https://github.com/mixiaodou/flutter_datafinder.git
       ref: master
