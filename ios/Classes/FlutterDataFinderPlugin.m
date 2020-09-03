@@ -39,8 +39,11 @@
       NSString* appId= call.arguments[@"appId"];
       NSString* appName= call.arguments[@"appName"];
 
-      NSLog(@"init appId:%@",appId);
-      NSLog(@"init appName:%@",appName);
+       #if DEBUG
+          NSLog(@"-- init appId:%@",appId);
+          NSLog(@"-- init appName:%@",appName);
+       #endif
+
 
         /* 初始化开始 */
       BDAutoTrackConfig*config =[BDAutoTrackConfig configWithAppID:appId];
@@ -68,7 +71,9 @@
 - (void)setUid:(FlutterMethodCall*)call result:(FlutterResult)result {
       NSString* uid= call.arguments[@"uid"];
 
-      NSLog(@"setUid uid:%@",uid);
+      #if DEBUG
+         NSLog(@"-- setUid uid:%@",uid);
+      #endif
 
       //设置您自己的账号体系ID, 并保证其唯一性 ！
       [BDAutoTrack setCurrentUserUniqueID:uid];
@@ -81,8 +86,10 @@
       NSString* eventName= call.arguments[@"eventName"];
       NSDictionary* params= call.arguments[@"params"];
 
-      NSLog(@"event eventName:%@",eventName);
-      NSLog(@"event params:%@",params);
+       #if DEBUG
+             NSLog(@"-- event eventName:%@",eventName);
+             NSLog(@"-- event params:%@",params);
+       #endif
 
       NSString* event=[@"event_" stringByAppendingString:eventName];
 
@@ -101,8 +108,11 @@
       NSString* pageName= call.arguments[@"pageName"];
       NSDictionary* params= call.arguments[@"params"];
 
-      NSLog(@"pageStart pageName:%@",pageName);
-      NSLog(@"pageStart params:%@",params);
+
+      #if DEBUG
+          NSLog(@"-- pageStart pageName:%@",pageName);
+          NSLog(@"-- pageStart params:%@",params);
+      #endif
 
       NSString* event= [@"pageStart_" stringByAppendingString:pageName];
 
@@ -121,8 +131,10 @@
       NSString* pageName= call.arguments[@"pageName"];
       NSDictionary* params= call.arguments[@"params"];
 
-      NSLog(@"pageEnd pageName:%@",pageName);
-      NSLog(@"pageEnd params:%@",params);
+      #if DEBUG
+           NSLog(@"-- pageEnd pageName:%@",pageName);
+           NSLog(@"-- pageEnd params:%@",params);
+      #endif
 
       NSString* event= [@"pageEnd_" stringByAppendingString:pageName];
 
