@@ -99,7 +99,7 @@ public class FlutterDataFinderPlugin implements FlutterPlugin, MethodCallHandler
         config.setPicker(new Picker(application, config));
 
         // 开启AB测试
-        config.setAbEnable(false);
+        config.setAbEnable(true);
 
         config.setAutoStart(true);
         AppLog.init(application, config);

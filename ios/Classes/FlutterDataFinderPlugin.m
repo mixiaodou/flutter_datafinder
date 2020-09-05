@@ -53,7 +53,7 @@
 
       config.appName = appName; // 与您申请APPID时的app_name一致
       config.channel = @"App Store"; // iOS一般默认App Store
-      config.abEnable = FALSE; //开启ab测试，默认为YES
+      config.abEnable = YES; //开启ab测试，默认为YES
 
       config.showDebugLog = YES; // 是否在控制台输出日志，仅调试使用，需要同时设置logger。release版本请设置为 NO
       config.logger = ^(NSString * _Nullable log) {
