@@ -154,7 +154,7 @@ public class FlutterDataFinderPlugin implements FlutterPlugin, MethodCallHandler
             System.out.println("---- pageStart params=" + params.toString());
         }
 
-        String event = "event_" + pageName;
+        String event = "pageStart_" + pageName;
 
         try {
             if (params != null && !params.isEmpty()) {
